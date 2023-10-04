@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package product;
+
+message DecreaseStockRequest {
+    int32 id = 1;
+    int32 orderId = 2;
+}
+
+message DecreaseStockResponse {
+    int32 status = 1;
+    repeated string error = 2;
+}
+
+service ProductService {
+    rpc DecreaseStock(DecreaseStockRequest) returns (DecreaseStockResponse);
+}
