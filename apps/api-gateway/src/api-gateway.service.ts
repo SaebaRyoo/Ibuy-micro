@@ -4,7 +4,7 @@ import {
   CreateOrderResponse,
   ORDER_SERVICE_NAME,
   OrderServiceClient,
-} from '../../../protos/pbs/protos/order.pb';
+} from '@protos/pbs/protos/order.pb';
 import { ClientGrpc } from '@nestjs/microservices';
 import { firstValueFrom } from 'rxjs';
 

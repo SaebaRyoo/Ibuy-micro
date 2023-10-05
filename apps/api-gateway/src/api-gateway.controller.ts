@@ -1,6 +1,6 @@
 import { Controller, Get, Post } from '@nestjs/common';
 import { ApiGatewayService } from './api-gateway.service';
-import { CreateOrderResponse } from '../../../protos/pbs/protos/order.pb';
+import { CreateOrderResponse } from '@protos/pbs/protos/order.pb';
 @Controller()
 export class ApiGatewayController {
   constructor(private readonly apiGatewayService: ApiGatewayService) {}
