@@ -23,6 +23,12 @@
       ],
       "@protos/*": [
         "protos/*"
+      ],
+      "@common": [
+        "common"
+      ],
+      "@common/*": [
+        "common/*"
       ]
     }
   }

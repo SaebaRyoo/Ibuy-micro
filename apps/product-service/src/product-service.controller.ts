@@ -3,7 +3,7 @@ import { ProductServiceService } from './product-service.service';
 import {
   DecreaseStockResponse,
   PRODUCT_SERVICE_NAME,
-} from '../../../protos/pbs/protos/product.pb';
+} from '@protos/pbs/protos/product.pb';
 import { GrpcMethod } from '@nestjs/microservices';
 
 @Controller()
