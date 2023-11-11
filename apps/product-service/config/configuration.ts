@@ -3,7 +3,7 @@ import * as yaml from 'js-yaml';
 import { readFileSync } from 'fs';
 import { join } from 'path';
 
-export default registerAs('ORDER_SERVICE', () => getConfig());
+export default registerAs('PRODUCT_CONFIG', () => getConfig());
 
 export const getConfig = () => {
   const YAML_CONFIG_FILENAME = `${process.env.NODE_ENV || 'development'}.yaml`;

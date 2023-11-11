@@ -1,21 +1,34 @@
 import { Module } from '@nestjs/common';
 import { ApiGatewayController } from './api-gateway.controller';
 import { ApiGatewayService } from './api-gateway.service';
-import { ClientsModule } from '@nestjs/microservices';
+import { ClientsModule, Transport } from '@nestjs/microservices';
 import { ORDER_SERVICE_NAME } from '@protos/pbs/protos/order.pb';
-import { orderClient } from '@protos/order.client.options';
-import { ConfigModule } from '@nestjs/config';
+import { order } from '@protos/pbs';
+import { ConfigModule, ConfigService } from '@nestjs/config';
 import configuration from '../config/configuration';
+import * as path from 'path';
 
 @Module({
   imports: [
     ConfigModule.forRoot({
       load: [configuration],
     }),
-    ClientsModule.register([
+    ClientsModule.registerAsync([
       {
         name: ORDER_SERVICE_NAME,
-        ...orderClient,
+        imports: [ConfigModule],
+        inject: [ConfigService],
+        useFactory: (configService: ConfigService) => {
+          const services = configService.get('API_GATEWAY.services');
+          return {
+            transport: Transport.GRPC,
+            options: {
+              package: order.ORDER_PACKAGE_NAME,
+              protoPath: path.join(process.cwd(), './protos/order.proto'),
+              url: `${services['order-service'].host}:${services['order-service'].port}`,
+            },
+          };
+        },
       },
     ]),
   ],
