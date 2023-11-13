@@ -32,7 +32,7 @@ import * as path from 'path';
             transport: Transport.GRPC,
             options: {
               package: PRODUCT_PACKAGE_NAME,
-              protoPath: path.join(process.cwd(), './protos/product.proto'),
+              protoPath: path.join(__dirname, './protos/product.proto'),
               url: `${services['product-service'].host}:${services['product-service'].port}`,
             },
           };

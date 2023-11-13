@@ -9,7 +9,9 @@ async function bootstrap() {
   const config = getConfig();
   const host = config.services['api-gateway'].host;
   const port = config.services['api-gateway'].port;
-  const app = await NestFactory.create(ApiGatewayModule);
+  const app = await NestFactory.create(ApiGatewayModule, {
+    logger: ['error', 'warn'],
+  });
   app.useGlobalInterceptors(new ResponseInterceptor());
   app.useGlobalFilters(new BaseExceptionFilter(), new HttpExceptionFilter());
   await app.listen(port);

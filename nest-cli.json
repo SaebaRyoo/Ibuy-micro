@@ -1,11 +1,10 @@
 {
   "$schema": "https://json.schemastore.org/nest-cli",
   "collection": "@nestjs/schematics",
-  "sourceRoot": ".",
+  "sourceRoot": "./",
   "compilerOptions": {
     "deleteOutDir": true,
-    "webpack": true,
-    "tsConfigPath": "apps/api-gateway/tsconfig.app.json"
+    "webpack": true
   },
   "monorepo": true,
   "root": "apps/api-gateway",
@@ -21,6 +20,10 @@
           {
             "include": "../config/*.yaml",
             "outDir": "./dist/apps/api-gateway"
+          },
+          {
+            "include": "../protos/*.proto",
+            "outDir": "./dist/apps/api-gateway/protos"
           }
         ]
       }
@@ -45,6 +48,10 @@
           {
             "include": "../config/*.yaml",
             "outDir": "./dist/apps/product-service"
+          },
+          {
+            "include": "../protos/*.proto",
+            "outDir": "./dist/apps/product-service/protos"
           }
         ]
       }
@@ -60,6 +67,10 @@
           {
             "include": "../config/*.yaml",
             "outDir": "./dist/apps/order-service"
+          },
+          {
+            "include": "../protos/*.proto",
+            "outDir": "./dist/apps/order-service/protos"
           }
         ]
       }

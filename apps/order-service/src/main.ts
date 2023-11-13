@@ -17,7 +17,7 @@ async function bootstrap() {
       transport: Transport.GRPC,
       options: {
         package: order.ORDER_PACKAGE_NAME,
-        protoPath: path.join(process.cwd(), './protos/order.proto'),
+        protoPath: path.join(__dirname, './protos/order.proto'),
         url: `${host}:${port}`,
       },
     },
@@ -35,7 +35,7 @@ async function bootstrap() {
   //   transport: Transport.GRPC,
   //   options: {
   //     package: order.ORDER_PACKAGE_NAME,
-  //     protoPath: path.join(process.cwd(), './protos/test.proto'),
+  //     protoPath: path.join(__dirname, './protos/test.proto'),
   //     url: `${services['order-service'].host}:${services['order-service'].port}`,
   //   },
   // });
