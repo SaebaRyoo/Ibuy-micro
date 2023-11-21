@@ -26,6 +26,9 @@ import * as path from 'path';
               package: order.ORDER_PACKAGE_NAME,
               protoPath: path.join(__dirname, './protos/order.proto'),
               url: `${services['order-service'].host}:${services['order-service'].port}`,
+              loader: {
+                defaults: true,
+              },
             },
           };
         },

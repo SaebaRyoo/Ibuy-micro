@@ -6,7 +6,7 @@ export class ProductServiceService {
   async decreaseStock(): Promise<DecreaseStockResponse> {
     return {
       status: 200,
-      error: [],
+      error: ['a', 'b', 'c'],
     };
   }
 }

@@ -29,8 +29,8 @@ export class OrderServiceService implements OnModuleInit {
 
     if (response.status === 200) {
       return {
+        ...response,
         status: 200,
-        error: [],
         id: 1,
       };
     }

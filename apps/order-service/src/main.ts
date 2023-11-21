@@ -6,8 +6,6 @@ import { order } from '@protos/pbs';
 import { getConfig } from '../config/configuration';
 
 async function bootstrap() {
-  // const configService = new ConfigService();
-  // console.log(configService.get('ORDER_SERVICE.services'));
   const config = getConfig();
   const host = config.services['order-service'].host;
   const port = config.services['order-service'].port;
