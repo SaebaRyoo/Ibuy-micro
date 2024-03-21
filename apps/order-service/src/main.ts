@@ -2,7 +2,7 @@ import { NestFactory } from '@nestjs/core';
 import { OrderServiceModule } from './order-service.module';
 import { MicroserviceOptions, Transport } from '@nestjs/microservices';
 import * as path from 'path';
-import { order } from '@protos/pbs';
+import { ORDER_PACKAGE_NAME } from '@protos/order.pb';
 import { getConfig } from '../config/configuration';
 
 async function bootstrap() {
@@ -14,7 +14,7 @@ async function bootstrap() {
     {
       transport: Transport.GRPC,
       options: {
-        package: order.ORDER_PACKAGE_NAME,
+        package: ORDER_PACKAGE_NAME,
         protoPath: path.join(__dirname, './protos/order.proto'),
         url: `${host}:${port}`,
       },

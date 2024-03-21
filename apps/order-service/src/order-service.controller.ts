@@ -1,9 +1,6 @@
 import { Controller, Get, Inject } from '@nestjs/common';
 import { OrderServiceService } from './order-service.service';
-import {
-  CreateOrderResponse,
-  ORDER_SERVICE_NAME,
-} from '@protos/pbs/protos/order.pb';
+import { CreateOrderResponse, ORDER_SERVICE_NAME } from '@protos/order.pb';
 import { GrpcMethod } from '@nestjs/microservices';
 import { ConfigService } from '@nestjs/config';
 

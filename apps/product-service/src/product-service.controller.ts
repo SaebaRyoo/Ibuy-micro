@@ -1,10 +1,10 @@
 import { Controller, Get } from '@nestjs/common';
 import { ProductServiceService } from './product-service.service';
+import { GrpcMethod } from '@nestjs/microservices';
 import {
   DecreaseStockResponse,
   PRODUCT_SERVICE_NAME,
-} from '@protos/pbs/protos/product.pb';
-import { GrpcMethod } from '@nestjs/microservices';
+} from '@protos/product.pb';
 
 @Controller()
 export class ProductServiceController {

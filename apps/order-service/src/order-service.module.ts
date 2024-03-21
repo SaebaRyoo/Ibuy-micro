@@ -2,13 +2,10 @@ import { Module } from '@nestjs/common';
 import { OrderServiceController } from './order-service.controller';
 import { OrderServiceService } from './order-service.service';
 import { ClientsModule, Transport } from '@nestjs/microservices';
-import {
-  PRODUCT_SERVICE_NAME,
-  PRODUCT_PACKAGE_NAME,
-} from '@protos/pbs/protos/product.pb';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import configuration from '../config/configuration';
 import * as path from 'path';
+import { PRODUCT_PACKAGE_NAME, PRODUCT_SERVICE_NAME } from '@protos/product.pb';
 
 @Module({
   imports: [

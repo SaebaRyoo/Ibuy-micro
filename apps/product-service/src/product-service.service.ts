@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { DecreaseStockResponse } from '@protos/pbs/protos/product.pb';
+import { DecreaseStockResponse } from '@protos/product.pb';
 
 @Injectable()
 export class ProductServiceService {

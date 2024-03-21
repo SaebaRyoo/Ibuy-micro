@@ -22,7 +22,7 @@
             "outDir": "./dist/apps/api-gateway"
           },
           {
-            "include": "../protos/*.proto",
+            "include": "../../../node_modules/Ibuy-protos/protos/*.proto",
             "outDir": "./dist/apps/api-gateway/protos"
           }
         ]
@@ -50,7 +50,7 @@
             "outDir": "./dist/apps/product-service"
           },
           {
-            "include": "../protos/*.proto",
+            "include": "../../../node_modules/Ibuy-protos/protos/*.proto",
             "outDir": "./dist/apps/product-service/protos"
           }
         ]
@@ -69,7 +69,7 @@
             "outDir": "./dist/apps/order-service"
           },
           {
-            "include": "../protos/*.proto",
+            "include": "../../../node_modules/Ibuy-protos/protos/*.proto",
             "outDir": "./dist/apps/order-service/protos"
           }
         ]

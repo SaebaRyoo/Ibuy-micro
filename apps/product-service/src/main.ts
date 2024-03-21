@@ -3,7 +3,7 @@ import { ProductServiceModule } from './product-service.module';
 import { getConfig } from '../config/configuration';
 import { Transport } from '@nestjs/microservices';
 import * as path from 'path';
-import { PRODUCT_PACKAGE_NAME } from '@protos/pbs/protos/product.pb';
+import { PRODUCT_PACKAGE_NAME } from '@protos/product.pb';
 
 async function bootstrap() {
   const config = getConfig();

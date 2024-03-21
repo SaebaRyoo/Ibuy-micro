@@ -1,11 +1,8 @@
 import { Inject, Injectable, OnModuleInit } from '@nestjs/common';
-import { CreateOrderResponse } from '@protos/pbs/protos/order.pb';
-import {
-  PRODUCT_SERVICE_NAME,
-  ProductServiceClient,
-} from '@protos/pbs/protos/product.pb';
 import { ClientGrpc } from '@nestjs/microservices';
 import { firstValueFrom } from 'rxjs';
+import { PRODUCT_SERVICE_NAME, ProductServiceClient } from '@protos/product.pb';
+import { CreateOrderResponse } from '@protos/order.pb';
 
 @Injectable()
 export class OrderServiceService implements OnModuleInit {
