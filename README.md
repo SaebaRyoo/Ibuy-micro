@@ -5,13 +5,10 @@
 `npm install` 或者 `yarn`
 
 
-## 安装 proto
+## 安装 proto & 基于**protobuf schema**生成 TypeScript 类型。
 
-`yarn run proto:install`
+`yarn run proto`
 
-## 基于**protobuf schema**生成 TypeScript 类型。
-
-`yarn run proto:all`
 
 ## 运行各个微服务
 

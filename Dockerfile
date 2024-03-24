@@ -1,11 +1,15 @@
 FROM node:20-alpine as builder
 
-WORKDIR /usr/src/app
+WORKDIR /home/app/
 
-COPY package*.json .
+COPY package.json .
 # COPY yarn.lock .
 
-RUN npm install --force
+# 安装 build 依赖
+RUN apk --virtual build-dependencies add git \
+    && npm run proto:install \
+    && npm install --legacy-peer-deps \
+    && apk del build-dependencies
 
 COPY . .
 
@@ -13,13 +17,13 @@ RUN npm run build:gateway
 # Step 2: 运行时使用更精简的基础镜像
 FROM node:20-alpine
 
-WORKDIR /usr/src/app
+WORKDIR /home/app
 
 # 从builder阶段复制构建好的文件
-COPY --from=builder /usr/src/app/dist ./dist
-COPY --from=builder /usr/src/app/node_modules ./node_modules
+COPY --from=builder /home/app/dist ./dist
+COPY --from=builder /home/app/node_modules ./node_modules
 
 EXPOSE 3002
 
-CMD ["node", "./dist/app/api-gateway/main.js"]
+CMD ["node", "./dist/apps/api-gateway/main.js"]
 
