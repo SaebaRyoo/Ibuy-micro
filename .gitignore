@@ -36,6 +36,8 @@ lerna-debug.log*
 
 # env
 **/*.env
-**/*.yaml
+**/local.yaml
+**/dev.yaml
+**/prod.yaml
 
 apps/**/protos

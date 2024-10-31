@@ -22,7 +22,7 @@
             "outDir": "./dist/apps/api-gateway"
           },
           {
-            "include": "../../../node_modules/Ibuy-protos/protos/*.proto",
+            "include": "../protos/*.proto",
             "outDir": "./dist/apps/api-gateway/protos"
           }
         ]
@@ -39,38 +39,38 @@
     },
     "product-service": {
       "type": "application",
-      "root": "apps/product-service",
+      "root": "apps/services/product-service",
       "entryFile": "main",
-      "sourceRoot": "apps/product-service/src",
+      "sourceRoot": "apps/services/product-service/src",
       "compilerOptions": {
-        "tsConfigPath": "apps/product-service/tsconfig.app.json",
+        "tsConfigPath": "apps/services/product-service/tsconfig.app.json",
         "assets": [
           {
             "include": "../config/*.yaml",
-            "outDir": "./dist/apps/product-service"
+            "outDir": "./dist/apps/services/product-service"
           },
           {
-            "include": "../../../node_modules/Ibuy-protos/protos/*.proto",
-            "outDir": "./dist/apps/product-service/protos"
+            "include": "../protos/*.proto",
+            "outDir": "./dist/apps/services/product-service/protos"
           }
         ]
       }
     },
     "order-service": {
       "type": "application",
-      "root": "apps/order-service",
+      "root": "apps/services/order-service",
       "entryFile": "main",
-      "sourceRoot": "apps/order-service/src",
+      "sourceRoot": "apps/services/order-service/src",
       "compilerOptions": {
-        "tsConfigPath": "apps/order-service/tsconfig.app.json",
+        "tsConfigPath": "apps/services/order-service/tsconfig.app.json",
         "assets": [
           {
             "include": "../config/*.yaml",
-            "outDir": "./dist/apps/order-service"
+            "outDir": "./dist/apps/services/order-service"
           },
           {
-            "include": "../../../node_modules/Ibuy-protos/protos/*.proto",
-            "outDir": "./dist/apps/order-service/protos"
+            "include": "../protos/*.proto",
+            "outDir": "./dist/apps/services/order-service/protos"
           }
         ]
       }

@@ -1,8 +1,8 @@
 import { NestFactory } from '@nestjs/core';
 import { ApiGatewayModule } from './api-gateway.module';
-import { ResponseInterceptor } from '@common/interceptors/response.interceptor';
-import { HttpExceptionFilter } from '@common/filters/http.exception.filter';
-import { BaseExceptionFilter } from '@common/filters/base.exception.filter';
+import { ResponseInterceptor } from '@libs/common/interceptors/response.interceptor';
+import { HttpExceptionFilter } from '@libs/common/filters/http.exception.filter';
+import { BaseExceptionFilter } from '@libs/common/filters/base.exception.filter';
 import { getConfig } from '../config/configuration';
 
 async function bootstrap() {

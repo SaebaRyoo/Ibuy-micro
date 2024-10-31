@@ -1,0 +1,52 @@
+
+#HOST: localhost
+#PORT: 3002
+#
+#jwt:
+#  secret: !@12qwe
+#  expires: 1d
+#
+#db:
+#  postgre:
+#    host: localhost
+#    port: 5432
+#    user: postgres
+#    password: zqy19970114
+#    dbname: mall
+#
+#services:
+#  api-gateway:
+#    host: localhost
+#    port: 3002
+
+#  order-service:
+#    host: localhost
+#    port: 50001
+#  product-service:
+#    host: localhost
+#    port: 50003
+
+DATABASE_USER: test
+DATABASE_PASSWORD: test
+
+db:
+  postgre:
+    user: test
+    password: test
+    host: localhost
+    port: 5432
+
+HOST: localhost
+PORT: 3002
+
+services:
+  api-gateway:
+    host: localhost
+    port: 3002
+  order-service:
+    host: localhost
+    port: 50001
+
+  product-service:
+    host: localhost
+    port: 50003

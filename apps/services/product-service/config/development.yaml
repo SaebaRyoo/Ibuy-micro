@@ -1,0 +1,13 @@
+db:
+  postgres:
+    url: 'localhost'
+    port: 5432
+    database: 'yaml-db'
+
+  sqlite:
+    database: 'sqlite.db'
+
+services:
+  product:
+    host: localhost
+    port: 50003

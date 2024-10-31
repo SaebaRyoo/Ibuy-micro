@@ -1,0 +1,3 @@
+[submodule "libs/Ibuy-protos"]
+	path = libs/Ibuy-protos
+	url = https://github.com/SaebaRyoo/Ibuy-protos.git

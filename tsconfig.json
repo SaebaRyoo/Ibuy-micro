@@ -18,10 +18,8 @@
     "forceConsistentCasingInFileNames": false,
     "noFallthroughCasesInSwitch": false,
     "paths": {
-      "@protos": ["protos"],
-      "@protos/*": ["protos/*"],
-      "@common": ["common"],
-      "@common/*": ["common/*"]
+      "@libs": ["libs"],
+      "@libs/*": ["libs/*"]
     }
   }
 }
